@@ -18,6 +18,7 @@ Clone the repository:
 git clone https://github.com/yogitajibhakate/Library_Management_Frappe.git
 Install the app:
 bench install-app library_management
+
 Start the server:
 bench start
 ## Author
