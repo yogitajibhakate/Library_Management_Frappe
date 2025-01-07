@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <style>
+        .book-container {
+            display: flex;
+            max-width: 400px;
+            margin: 20px 10px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .book-image {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .book-image img {
+            max-width: 50%;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-details {
+            flex: 2;
+        }
+
+        .book-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 2px;
+            color: #3f6eb9;
+        }
+
+		a:hover {
+			text-decoration: none;
+		}
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <div class="book-image">
+            <a href="{{ doc.route }}"><img src="{{ image }}" alt="{{ title }}"></a>
+        </div>
+
+        <div class="book-details">
+			<a class="book-title" href="{{ doc.route }}">{{ doc.title or doc.name }}</a>
+            
+			<div><a class="book-author" href="{{ doc.route }}">By {{ author }}</div>
+        </div>
+    </div>
+</body>
+</html>
